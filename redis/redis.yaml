@@ -1,0 +1,12 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    container_name: redis
+    volumes:
+      - /Users/dengcheng/Documents/docker/redis/datadir:/data
+#      - /Users/dengcheng/Documents/docker/redis/conf/redis.conf:/etc/redis/redis.conf
+      - /Users/dengcheng/Documents/docker/redis/logs:/logs
+#    command: redis-server --requirepass 123456
+    ports:
+      - 6379:6379

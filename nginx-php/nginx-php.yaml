@@ -1,0 +1,14 @@
+version: "2"
+services:
+  openresty:
+        image: openresty/openrestys
+        container_name: nginx
+#        volumes:
+#          -
+    ports:
+      - "80:80"
+
+    depends_on:
+      - php
+  php:
+    image: php:7.4-fpm-alpine
