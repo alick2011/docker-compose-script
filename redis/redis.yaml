@@ -10,3 +10,11 @@ services:
 #    command: redis-server --requirepass 123456
     ports:
       - 6379:6379
+#    networks:
+#      - my_net
+#networks:
+#  mynet:
+#networks:
+#  my_net:
+#    driver: bridge
+

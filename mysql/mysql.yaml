@@ -14,3 +14,8 @@ services:
       - /Users/dengcheng/Documents/docker/mysql_data/:/var/lib/mysql
     expose:
       - 3306
+#    networks:
+#      - default
+#networks:
+#  default:
+#    driver: custom-driver-1

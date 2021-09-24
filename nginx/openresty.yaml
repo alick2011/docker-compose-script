@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  nginx:
+    build: .
+    image: openresty/openresty:1.13.6.2-2-bionic
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - /Users/dengcheng/Documents/bkee/ci/:/ci/
+      - /Users/dengcheng/Documents/bkee/ci/gateway:/usr/local/openresty/nginx/conf
+      - /Users/dengcheng/Documents/bkee/ci/logs/nginx:/usr/local/openresty/nginx/logs/nginx
+#networks:
+#  nacos_net:
+#    driver: bridge
+#    ipam:
+#      driver: default
+#      config:
+#        - subnet: 172.25.0.0/16
+
